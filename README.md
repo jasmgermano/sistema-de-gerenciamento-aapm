@@ -1,1 +1,0 @@
-# sistema-de-gerenciamento-aapm
