@@ -1,7 +1,7 @@
 # SISTEMA DE GERENCIAMENTO AAPM
 ## Descrição
 
-Projeto de conclusão de curso técnico de Informática tem o objetivo de desenvolver um software para gerenciamento da AAPM da escola SENAI 
+Projeto de conclusão de curso técnico de Informática com o objetivo de desenvolver um software para gerenciamento da AAPM da escola SENAI 
 “Prof. Dr. Euryclides de Jesus Zerbini”,  possibilitando uma maior agilidade e praticidade na realização das tarefas.
 
 ## Funcionalidades
