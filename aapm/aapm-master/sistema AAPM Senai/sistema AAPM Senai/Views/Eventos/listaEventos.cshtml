@@ -1,0 +1,58 @@
+﻿@model IEnumerable<sistema_AAPM_Senai.Models.Eventos>
+
+@{
+    ViewBag.Title = "listaEventos";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="~/images/favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="~/css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="~/css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="~/css/swiper.min.css">
+    <!-- Styles -->
+    <link href="~/css/style.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="~/css/style.css">*@
+</head>
+<body>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <img src="~/images/19514-200.png" style="width: 50px; margin-left: 30px;"/>
+                <div class="vl"  style="margin-left: 50px;">
+                        <b style="margin-left: 10px;">@Html.DisplayFor(modelItem => item.Nome_evento)</b>
+                        <p style="margin-left: 10px; margin-bottom: 0px;">De @Html.DisplayFor(modelItem => item.Comeco) <b>até</b> @Html.DisplayFor(modelItem => item.Final)</p>
+                        <p style="margin-left: 10px;"> @Html.DisplayFor(modelItem => item.Descricao)</p>
+                </div>
+            </tr>
+        }
+    <td>
+    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+    </td>
+</body>
+</html>

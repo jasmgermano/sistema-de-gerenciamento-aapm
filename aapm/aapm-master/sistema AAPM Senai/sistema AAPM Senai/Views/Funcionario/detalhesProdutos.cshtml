@@ -1,0 +1,66 @@
+﻿@model sistema_AAPM_Senai.Models.Produtos
+
+@{
+    ViewBag.Title = "detalhesProdutos";
+}
+
+<h2>detalhesProdutos</h2>
+
+<div>
+    <h4>Produtos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cod_produto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cod_produto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qtd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cod_escola)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cod_escola)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome_produto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome_produto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Img)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Img)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,295 @@
+﻿
+@{
+    ViewBag.Title = "Principal";
+}
+
+@{
+    Layout = null;
+}
+
+@using sistema_AAPM_Senai.Models
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="~/images/favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="~/css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="~/css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="~/css/swiper.min.css">
+    <!-- Styles -->
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    @*<link rel="stylesheet" href="~/css/style.css">*@
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="site-header">
+
+        <div class="nav-bar" id="section1" style="height:79px">
+            <div class="container" style="height:70px">
+                <div class="row" style="height:55px">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                            <a class="d-block" href="~/Principal/Principal" rel="home"><img class="d-block" src="~/images/aapm.png" alt="logo"></a>
+                        </div><!-- .site-branding -->
+
+                        <nav class="site-navigation d-flex justify-content-end align-items-center">
+                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center" style="overflow: visible;">
+                                <li>
+                                    <a href="~/Adm/CadastroFuncionarios">
+                                        <div class="tooltip">
+                                            <span class="tooltiptext">Tooltip text</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <div class="menu-drop">
+                                    <button type="button" name="drop" style=" margin-top: 35px;">
+                                        <b>Funcionários</b>
+                                    </button>
+                                    <div class="drop-content">
+                                        <a href="~/Adm/CadastroFuncionarios">Cadatrar funcionários</a>
+                                        <a href="~/Adm/CadastroFuncionarios">Lista de funcionários</a>
+                                    </div>
+
+                                </div>
+
+                                    </div>              
+
+</ul>
+                        </nav><!-- .site-navigation -->
+
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .nav-bar -->
+    </header><!-- .site-header -->
+            <script>
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("navbar").style.top = "0";
+            } else {
+            document.getElementById("navbar").style.top = "-50px";
+            }
+            }
+            </script>
+        </div><!-- .nav-bar -->
+    </header><!-- .site-header -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide hero-content-wrap">
+                <img src="~/images/principal.png" alt="">
+
+                <div class="hero-content-overlay position-absolute w-100 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                                <header class="entry-header">
+                                  
+                                        <h4>Sistema de gerenciamento</h4>
+                                    <center>
+                                        <h1>da AAPM</h1>
+                                    </center>
+                                   
+                                </header><!-- .entry-header -->
+                                @*@if (((Login)Session["User"]).Cargo == 0)
+                                {*@
+                                <div class="entry-content mt-4">
+                                    <p>Seja bem - vindo administrador!<br /> Aqui você poderá cadastrar AAPM's, funcionários e Eventos.</p>
+                                </div><!-- .entry-content -->
+                                @*}
+                                else
+                                {
+                                    if (((Login)Session["User"]).Cargo == 1)
+                                    {*@
+                                        <div class="entry-content mt-4">
+                                            <p>Seja bem - vindo Funcionário!<br /> Aqui você poderá cadastrar alunos e produtos!</p>
+                                        </div><!-- .entry-content -->
+                                    @*}
+
+                                }*@
+                               <!--}--> 
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .hero-content-overlay -->
+            </div><!-- .hero-content-wrap -->
+        </div><!-- .swiper-wrapper -->
+
+    <div class="home-page-icon-boxes">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box active">
+                        <figure class="d-flex justify-content-center">
+                            <img src="~/images/donation-gray.png" alt="">
+                            <img src="~/images/donation-white.png" alt="">
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title"> Projeto </h3>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>Esse projeto foi apresentado à Escola SENAI “Prof. Dr. Euryclides de Jesus Zerbini” para obtenção do certificado de conclusão do Curso Técnico de Informática, com o objetivo de facilitar as atividades realizadas na AAPM. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <figure class="d-flex justify-content-center">
+                            <img src="~/images/pessoa_cinza.png" alt="">
+                            <img src="~/images/pessoa_branca.png" alt="">
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">Quem somos?</h3>
+                        </header>
+
+                        <div class="entry-content">
+                            <p><br/><br/>Gustavo, Jasmine e Palloma, alunos da Escola SENAI “Prof. Dr. Euryclides de Jesus Zerbini” <br /><br /></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <figure class="d-flex justify-content-center">
+                            <img src="~/images/livrocinza.png" alt="">
+                            <img src="~/images/livrobranco.png" alt="">
+                        </figure>
+
+                        <header class="entry-header">
+                            <h3 class="entry-title">Sobre a AAPM</h3>
+                        </header>
+
+
+
+                        <div class="entry-content">
+                            <p><br />A AAPM, Associação de Alunos, Ex-Alunos, Pais e Mestres, é uma entidade sem fins lucrativos e com objetivos sociais e educativos. <br /><br/></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .home-page-icon-boxes -->
+
+    <footer class="site-footer">
+        <div class="footer-widgets" style="height: 360px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="foot-about">
+                            <h2><a class="foot-logo" href="#"><img src="~/images/2.png" alt="logo"></a></h2>
+
+                        </div><!-- .foot-about -->
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                        <h2>Navegar</h2>
+
+                        <ul>
+                            <li><a href="~/Adm/CadastroFuncionarios">Funcionários</a></li>
+                            <li><a href="~/Adm/CadastroAAPM">AAPM </a></li>
+                        </ul>
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                        <div class="foot-latest-news">
+                            <h2>Acesse</h2>
+
+                            <ul>
+                                <li>
+                                    <h3><a href="https://www.sp.senai.br/">portal SENAI SÃO PAULO</a></h3>
+                                </li>
+
+                                <li>
+                                    <h3><a href="https://campinaszerbini.sp.senai.br/">SENAI "zerbini"</a></h3>
+                                </li>
+
+                                <li>
+                                    <h3><a href="https://pt-br.facebook.com/senainacional/">SENAI | facebook</a></h3>
+                                </li>
+                            </ul>
+                        </div><!-- .foot-latest-news -->
+                    </div><!-- .col -->
+
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-widgets -->
+
+        <div class="footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="m-0">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div><!-- .col-12 -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-bar -->
+    </footer><!-- .site-footer -->
+
+    <script type='text/javascript' src='~/js/jquery.js'></script>
+    <script type='text/javascript' src='~/js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='~/js/swiper.min.js'></script>
+    <script type='text/javascript' src='~/js/jquery.countdown.min.js'></script>
+    <script type='text/javascript' src='~/js/circle-progress.min.js'></script>
+    <script type='text/javascript' src='~/js/jquery.countTo.min.js'></script>
+    <script type='text/javascript' src='~/js/jquery.barfiller.js'></script>
+    <script type='text/javascript' src='~/js/custom.js'></script>
+
+</body>
+</html>
