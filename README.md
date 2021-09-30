@@ -1,4 +1,5 @@
 # SISTEMA DE GERENCIAMENTO AAPM
+Projeto feito utilizando .NET e C#. 
 ## Descrição
 
 Projeto de conclusão de curso técnico de Informática com o objetivo de desenvolver um software para gerenciamento da AAPM da escola SENAI 
@@ -19,6 +20,5 @@ Projeto de conclusão de curso técnico de Informática com o objetivo de desenv
 ## Layout
 <a href="https://colorlib.com/wp/template/the-charity/"> The Charity by colorlib </a>
 
-## Tecnologias
-Projeto feito utilizando .NET e C#. 
+
 
